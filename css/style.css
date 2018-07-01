@@ -25,15 +25,7 @@ body, html{
   min-height: 100%;
 }
 
-.pim2{
-  background-image: url(./image/adorable-baby-blur.jpg);
-  min-height: 40%;
-}
 
-.pim3{
-  background-image: url(./image/asian-baby-child.jpg);
-  min-height: 40%;
-}
 
 #firstImageSuit{
   margin-top: 0;
@@ -103,7 +95,7 @@ display: flex;
 
   .menuHeader{
     padding: 0 20px;
-    background: rgb(204, 102, 0, 0.9);
+    background: rgb(204, 102, 0);
   }
   .menu-toggle{
     display: block;
@@ -112,7 +104,7 @@ display: flex;
     position: absolute;
     width: 100%;
     height: calc(100vh - 50px);
-    background: rgb(204, 102, 0, 0.9);
+    background: rgb(204, 102, 0);
     top: 50px;
     left: -100%;
     transition: .5s;
@@ -131,7 +123,7 @@ display: flex;
 
 #menu.black {
   transition: .5s;
-  background: rgb(204, 102, 0, 0.9);
+  background: rgb(204, 102, 0);
 }
 #menu.black ul li a:hover{
     transition: .3s;
@@ -153,6 +145,21 @@ display: flex;
   font-style: oblique;
   font-size: 40px;
   line-height: 1.1;
+}
+@media (max-width:974px){
+  #nameSuit h1{
+    font-size: 30px;
+  }
+}
+@media (max-width:730px){
+  #nameSuit h1{
+    font-size: 25px;
+  }
+}
+@media (max-width:605px){
+  #nameSuit h1{
+    font-size: 20px;
+  }
 }
 
 
@@ -217,7 +224,46 @@ display: flex;
   box-shadow: 0 0 6px 3px rgba(58, 219, 263, 0.7);
 }
 
+@media (max-width:500px){
+  .container{
+    width: 90%;
+    height: auto;
+    background-color: rgb(204, 102, 0, 0.9);
+    margin: 60px 5% 0 5%;
+    text-align:  center;
+    border-radius: 20px 20px 20px 20px;
+    display: inline-block;
+    float: right;
+  }
+  #username, #phone{
+    width: 70%;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    padding-left: 40px;
+  }
+  .dws-submit{
+    height: 40px;
+    padding: 13px,30px;
+    margin: 5px, 0, 20px, 0;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgb(0, 179, 0);
+    border: none;
+    border-bottom: 4px solid rgb(102, 255, 102);
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.5s;
 
+  }
+
+  #nameOkna{
+    font-size: 18px;
+  }
+
+}
 
 
 
@@ -271,6 +317,7 @@ display: flex;
   height: auto;
 }
 @media screen and (max-width: 1000px){
+
   .benefit{
     width: 100%;
     height: 250px;
@@ -288,8 +335,27 @@ display: flex;
     vertical-align: bottom;
   }
 }
+@media screen and (max-width: 500px){
 
-
+    .benefit{
+      width: 100%;
+      height: auto;
+      margin: 0;
+      vertical-align: top;
+      display: block;
+    }
+    .imageBenefit{
+      display: block;
+      width: 100%;
+      vertical-align: bottom;
+    }
+    .captionBenefit{
+      display: block;
+      width: 100%;
+      vertical-align: top;
+      font-size: 18px;
+    }
+}
 
 
 #thirdPage{
@@ -491,7 +557,7 @@ display: flex;
   margin: 0;
   width: 100%;
   height: auto;
-  background-image: url(./image/adorableRed501.jpg);
+  background-image: url(./image/baby2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -631,6 +697,12 @@ overflow: hidden;
 transform: translateY(560px);
 transition: .5s;
 z-index: 99999;
+}
+@media (max-width:400px){
+  .dws-container{
+  display: none;
+  }
+
 }
 .dws-container:hover{
   transform: translateY(550px);
@@ -805,6 +877,12 @@ textarea.userInput{
 }
 
 
+@media (max-width: 500px){
+  .modal-content{
+    padding: 10px;
+    width: 95%;
+    }
+}
 
 
 
@@ -1033,6 +1111,10 @@ textarea.userInput{
   #next_cTab3,#prev_cTab3:hover #nextTab3,#prevTab3,
   #next_cTab4,#prev_cTab4:hover #nextTab4,#prevTab4 { visibility:visible;}
 
+@media and screen(max-width: 500px){
+
+
+}
 
 
 
@@ -1047,6 +1129,51 @@ textarea.userInput{
   width:80%;
   position:relative;
   height: auto;
+  }
+  @media (max-width: 500px){
+    #container2 {
+      display: block;
+      padding-top: 20px;
+      margin: 0;
+      width:100%;
+      position:relative;
+      height: auto;
+      }
+      #prev_c {
+        height:30%;
+        width:auto;
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:100;
+        }
+        #prev_c img {
+          height:20%;
+          width:20%;
+          position:absolute;
+          top:0;
+          bottom:0;
+          left:0;
+          margin:auto 0px;
+          }
+
+      #next_c {
+        height:30%;
+        width:auto;
+        position:absolute;
+        right:0;
+        top:0;
+        z-index:100;
+        }
+        #next_c img {
+          height:20%;
+          width:20%;
+          position:absolute;
+          top:0;
+          bottom:0;
+          right:0;
+          margin:auto 0px;
+          }
   }
 #slideshow {
   margin: 0;
