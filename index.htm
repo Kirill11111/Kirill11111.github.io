@@ -7,7 +7,6 @@
     <title>site</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/javaScript.js" defer></script>
@@ -17,11 +16,6 @@
       jQuery(function($){
       $("#phone").mask("+375 (99) 999-99-99");
       });
-      </script>
-      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-      <script src="js/wow.min.js"></script>
-      <script>
-          new WOW().init();
       </script>
     </head>
 
@@ -41,17 +35,7 @@
                 </nav>
                 <div class="menu-toggle"><i class="fas fa-bars"></i></div>
             </header>
-        <!-- <div class="wrapper">
-          <nav id="menu">
-            <div class="logo"> <img src="css/image/logoSuite.png"> </div>
-            <ul>
-                <li><a href="#firstImageSuit" class="scrollTo">Наверх</a></li>
-                <li><a href="#secondImageSuit" class="scrollTo">Почему мы?</a></li>
-                <li><a href="#thirdPage" class="scrollTo">Ассортимент</a></li>
-                <li><a href="#fourthPage" class="scrollTo">О нас</a></li>
-            </ul>
-          </nav>
-        </div> -->
+
 
         <div id="nameSuit">
           <h1>Одежда для новорождённых и детей до 5 лет</h1>
@@ -68,9 +52,11 @@
 
               <h2 id="nameOkna">Узнай прямо сейчас наличие товара и получи 10% скидки!</h2>
                 <div class="dws-input">
+                  <i id="iconUser"class="fas fa-user"></i>
                   <input type="text" id="username" name="username" placeholder="Введите имя">
                 </div>
-                <div class="dws-input">
+                <div id="iconPhone" class="dws-input">
+                  <i class="fas fa-phone"></i>
                   <input type="text" id="phone" name="namberPhone" placeholder="+375 (__) ___-__-__">
                 </div>
                 <div class="dwsSubmit">
@@ -103,9 +89,9 @@
        data-cycle-pager-template="<a href='#'><img src='{{src}}' ></a>">
 
 
-              <img src="css/image/speTovar/1.jpg.png" id="intro_img"/>
-               <img src="css/image/speTovar/2.jpg.png" id="intro_img"/>
-               <img src="css/image/speTovar/3.jpg.png" id="intro_img"/>
+              <img src="css/image/speTovar/1.png" id="intro_img"/>
+               <img src="css/image/speTovar/2.png" id="intro_img"/>
+               <img src="css/image/speTovar/3.png" id="intro_img"/>
                <div id="prev_c"><img id="prev" src="css/image/prev1.svg"/></div>
                <div id="next_c"><img id="next" src="css/image/next1.svg"/></div>
               </div>
@@ -117,12 +103,12 @@
 
       <section class="section-light" id="secondImageSuit">
 
-        <div class="nameSecondPage wow fadeInDown" data-wow-duration="1.5s" data-wow-offset="200" >
+        <div class="nameSecondPage">
           <h1>Почему выгодно у нас покупать?</h1>
         </div>
 
         <div class="blockBenefit">
-          <div class="benefit wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.5s" data-wow-offset="200">
+          <div class="benefit">
             <div id="imageFirstBenefit" class="imageBenefit">
               <img src="css/image/percent.png" alt="">
             </div>
@@ -136,7 +122,7 @@
           </div>
 
 
-          <div class="benefit wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s" data-wow-offset="200">
+          <div class="benefit">
             <div id="imageSecondBenefit" class="imageBenefit">
               <img src="css/image/eco.png" alt="">
             </div>
@@ -149,7 +135,7 @@
             </div>
           </div>
 
-          <div class="benefit wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s" data-wow-offset="200">
+          <div class="benefit">
             <div id="imageThirdBenefit" class="imageBenefit">
               <img src="css/image/package.png" alt="">
             </div>
@@ -199,7 +185,7 @@
                             </div>
                             <div class="card" onclick="openModal2()">
                                 <div class="poster">
-                                    <img src="css/image/iconTovar/top.jpg" alt="">
+                                    <img src="css/image/iconTovar/top.png" alt="">
                                     <div class="details">
                                         <h2> Верхняя одежда <br> <span>Ассортимент товара</span> </h2>
                                         <div class="tags">
