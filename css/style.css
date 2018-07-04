@@ -231,18 +231,18 @@ display: flex;
   box-shadow: 0 0 6px 3px rgba(58, 219, 263, 0.7);
 }
 
-@media (max-width:500px){
+@media (max-width:600px){
   .container{
-    width: 90%;
+    width: 300px;
     height: auto;
-    background-color: rgb(204, 102, 0, 0.9);
+    background-color: rgb(204, 102, 0);
     margin: 60px 5% 0 5%;
     text-align:  center;
     border-radius: 20px 20px 20px 20px;
     display: inline-block;
   }
   #username, #phone{
-    width: 70%;
+    width: 200px;
     height: 40px;
     font-size: 18px;
     margin-bottom: 25px;
