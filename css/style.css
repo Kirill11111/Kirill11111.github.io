@@ -24,11 +24,11 @@ body, html{
   background-image: url(./image/baby.jpg);
   height: 600px;
 }
-@media (max-width:600px) {
+/* @media (max-width:600px) {
   .pim1{
     background-image: url(./image/clothes.jpg);
   }
-}
+} */
 
 #firstImageSuit{
   margin-top: 0;
@@ -236,10 +236,10 @@ display: flex;
     width: 300px;
     height: auto;
     background-color: rgb(204, 102, 0);
-    margin: 60px 5% 0 5%;
-    text-align:  center;
+    margin: 60px auto 0;
     border-radius: 20px 20px 20px 20px;
-    display: inline-block;
+    display: block;
+    float: inherit;
   }
   #username, #phone{
     width: 200px;
