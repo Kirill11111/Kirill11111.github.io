@@ -114,23 +114,34 @@ function showPannel4() {
 }
 
 
+// Отправка заявки
 $(document).ready(function() {
-
-	//E-mail Ajax Send
-	$("#topForm").submit(function() { //Change
-		var th = $(this);
+	$('#topForm').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+		if (document.form.name.value == '' || document.form.phone.value == '' ) {
+			valid = false;
+			return valid;
+		}
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
+			url: "mail.php",
+			data: $(this).serialize()
 		}).done(function() {
-			alert("Заявка отправлена, в скором времени вам перезвонят!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
+			$('.js-overlay-thank-you').fadeIn();
+			$(this).find('input').val('');
+			$('#topForm').trigger('reset');
 		});
 		return false;
 	});
+});
 
+// Закрыть попап «спасибо»
+$('.js-close-thank-you').click(function() { // по клику на крестик
+	$('.js-overlay-thank-you').fadeOut();
+});
+
+$(document).mouseup(function (e) { // по клику вне попапа
+	var popup = $('.popup');
+	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+		$('.js-overlay-thank-you').fadeOut();
+	}
 });
