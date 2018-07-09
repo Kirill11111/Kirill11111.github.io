@@ -14,6 +14,7 @@
     <script src="js/javaScript.js" defer></script>
     <script src="js/cycle2.js"></script>
     <script src="js/jquery.maskedinput.min.js" ></script>
+    <script src="application.php" ></script>
     <script type="text/javascript">
       jQuery(function($){
       $("#phone").mask("+375 (99) 999-99-99");
@@ -50,11 +51,11 @@
               <h2 id="nameOkna">Узнай прямо сейчас наличие товара и получи 10% скидки!</h2>
                 <div class="dws-input">
                   <i id="iconUser"class="fas fa-user"></i>
-                  <input type="text" id="username" name="username" placeholder="Введите имя" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                  <input type="text" id="username" name="username" placeholder="Введите имя"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 </div>
                 <div id="iconPhone" class="dws-input">
                   <i class="fas fa-phone"></i>
-                  <input type="text" id="phone" name="namberPhone" placeholder="+375 (__) ___-__-__" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                  <input type="text" id="phone" name="namberPhone" placeholder="+375 (__) ___-__-__"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 </div>
                 <div class="dwsSubmit">
                   <input type="button" class="dws-submit" name="submit" value="Получить скидку прямо сейчас">
@@ -308,33 +309,31 @@
 
 
 
-
-
 <wrapper>
   <div class="dws-wrapper">
     <input type="checkbox" name="toggle" id='dws-form' class="toggleForm">
       <div class="dws-container">
           <label for="dws-form" class="toggleForm">Задать вопрос</label>
-          <form class="formBox">
+          <form class="formBox" action=" application.php" method="POST" name=" application ">
 
               <div class="inputBox">
                   <label class="labelText">Ваше имя:</label>
-                  <input type="text" class="userInput" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                  <input type="text" class="userInput" name="userName1" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
               </div>
 
               <div class="inputBox">
                   <label class="labelText">E-mail:</label>
-                  <input type="email" class="userInput" required>
+                  <input type="email" class="userInput" name="emailUser1" required>
               </div>
 
               <div class="inputBox">
                   <label class="labelText">Номер телефона:</label>
-                  <input type="phone" class="userInput" required pattern="\d+">
+                  <input type="phone" class="userInput" name="telUser1" required pattern="\d+">
               </div>
 
               <div class="inputBox">
                   <label class="labelText">Сообщение:</label>
-                  <textarea class="userInput" required></textarea >
+                  <textarea class="userInput" name="textUser1" required></textarea >
               </div>
 
               <div class="inputBox">
@@ -342,7 +341,7 @@
                   <label class="personalDoc">Я согласен на обработку моих <a href="#">персональных данных</a></label>
 
               </div>
-              <input type="submit" value="Отправить" class='button'>
+              <input type="submit" value="Отправить" class='button' form="application">
           </form>
       </div>
   </div>
@@ -534,15 +533,6 @@
           </div>
 
     </div>
-</div>
-
-
-
-<div class="overlay js-overlay-thank-you">
-  <div class="popup js-thank-you">
-    <h2>Спасибо за заявку</h2>
-    <div class="close-popup js-close-thank-you"></div>
-  </div>
 </div>
 
 
