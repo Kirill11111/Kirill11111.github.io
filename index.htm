@@ -2,14 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>site</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>ТОП-ТОП</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="apple-touch-icon" href="appleIcon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://raw.github.com/defunkt/jquery-pjax/master/jquery.pjax.js"></script>
     <script src="js/javaScript.js" defer></script>
     <script src="js/cycle2.js"></script>
     <script src="js/jquery.maskedinput.min.js" ></script>
@@ -45,20 +46,15 @@
         <div class="ptext">
           <div id="nameStock" class="container">
             <form id="topForm">
-              <!-- Hidden Required Fields -->
-          		<input type="hidden" name="project_name" value="Магазин детской одежды ТОП-ТОП">
-          		<input type="hidden" name="admin_email" value="gerchuk67@gmail.com">
-          		<input type="hidden" name="form_subject" value="ТОП-ТОП. ПРОСИМ ПЕРЕЗВОНИТЬ И ПОЛУЧИТЬ 10% СКИДКИ">
-          		<!-- END Hidden Required Fields -->
 
               <h2 id="nameOkna">Узнай прямо сейчас наличие товара и получи 10% скидки!</h2>
                 <div class="dws-input">
                   <i id="iconUser"class="fas fa-user"></i>
-                  <input type="text" id="username" name="username" placeholder="Введите имя">
+                  <input type="text" id="username" name="username" placeholder="Введите имя" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 </div>
                 <div id="iconPhone" class="dws-input">
                   <i class="fas fa-phone"></i>
-                  <input type="text" id="phone" name="namberPhone" placeholder="+375 (__) ___-__-__">
+                  <input type="text" id="phone" name="namberPhone" placeholder="+375 (__) ___-__-__" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 </div>
                 <div class="dwsSubmit">
                   <input type="submit" class="dws-submit" name="submit" value="Получить скидку прямо сейчас">
@@ -301,11 +297,11 @@
 
 
 
-      <section id="footers">
+      <div id="footers">
         <div class="footer">
           Copyright (c) 2018 Copyright Holder All Rights Reserved.
         </div>
-      </section>
+      </div>
 
 
 
@@ -323,7 +319,7 @@
 
               <div class="inputBox">
                   <label class="labelText">Ваше имя:</label>
-                  <input type="text" class="userInput" required>
+                  <input type="text" class="userInput" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
               </div>
 
               <div class="inputBox">
@@ -338,7 +334,7 @@
 
               <div class="inputBox">
                   <label class="labelText">Сообщение:</label>
-                  <textarea class="userInput" required></textarea>
+                  <textarea class="userInput" required></textarea >
               </div>
 
               <div class="inputBox">
@@ -353,7 +349,7 @@
 </wrapper>
 
 
-<div class="modal" id="simpleModal">
+<div class="modal pjax-container" id="simpleModal">
     <div class="modal-content">
         <span class="closeBtn">&times;</span>
         <div class="tabContainer">
