@@ -112,3 +112,26 @@ function showPannel4() {
      tabPanels4.style.display='block',
      tabPanels1.style.display='none';
 }
+
+
+
+
+$(document).ready(function() {
+	$("#formBox").submit(function() {
+		var str = $(this).serialize();
+		$.ajax({
+			type: "POST",
+			url: "send.php",
+			data: str,
+			success: function(msg) {
+				if(msg == 'OK') {
+					result = '<div class="ok">Сообщение отправлено</div>';
+					$("#fields").hide();
+				}
+				else {result = msg;}
+				$('#note').html(result);
+			}
+		});
+		return false;
+	});
+});
