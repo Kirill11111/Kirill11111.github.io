@@ -260,4 +260,60 @@ h2{
 	animation-delay: 1.8s;
 }
 
+@media (max-width: 1070px){
+	h2{
+	font-size: 30px;
+}
+	#onemore{
+	font-size: 20px;
+}
+#onemore1{
+	font-size: 20px;
+}
+}
+@media (max-width: 720px){
+	h2{
+	font-size: 25px;
+	}
+}
+@media (max-width: 640px){
+	h2{
+	color: #fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 1em .5em;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	transform: translate(-50%, -50%);	
+}
+	#onemore{
+	top: 40%;
+	left: 45%;
+	font-size: 15px;
+}
+#onemore span{
+	animation-delay: 2s;
+}
+#onemore.rev-block:after {
+	background: #5e239d;
+	animation-delay: 1.4s;
+}
+#onemore1{
+	top: 50%;
+	left: 55%;
+	font-size: 15px;
+}
+#onemore1 span{
+	animation-delay: 2s;
+}
+#onemore1.rev-block:after {
+	background: #993333;
+	animation-delay: 1.8s;
+}
+	.screen{
+	font-size: 30px;
+	top: 20%;
 
+}
+}
