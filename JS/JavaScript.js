@@ -1,49 +1,119 @@
+TweenMax.to(".overlay h1", 4, {
+            opacity: 0,
+            y: -60,
+            ease: Expo.easeInOut
+      })
 
-$(document).ready(function(){
-	$(".menu").click(function(){
-		$("nav").slideToggle(500);
-	})
-})
+      TweenMax.to(".overlay", 2, {
+            delay: 1,
+            top: "-100%",
+            ease: Expo.easeInOut
+      })
 
-function fadeOut() {
-	TweenMax.to(".myBtn", 1, {
-		y: -100,
-		opacity: 0
-	});
-	
-	TweenMax.to(".screen", 2,{
-		y: -400,
-		opacity: 0,
-		ease: Power2.easeInOut,
-		delay: 2
-	});
-	
-	TweenMax.from(".overlay",2, {
-		ease: Power2.easeInOut
-	});
-	
-	TweenMax.to(".overlay", 2, {
-		delay: 2.6,
-		top: "-110%",
-		ease: Expo.easeInOut
-	});
-	
-	TweenMax.to(".overlay-2", 2, {
-		delay: 3,
-		top: "-110%",
-		ease: Expo.easeInOut
-	});
-	
-	TweenMax.from(".content", 2, {
-		delay: 3.2,
-		opacity: 0,
-		ease: Power2.easeInOut
-	});
-	
-	TweenMax.to(".content", 2, {
-		opacity: 1,
-		y: -300,
-		delay: 3.2,
-		ease: Power2.easeInOut
-	});
-}
+      TweenMax.from(".logo", 1, {
+            delay: 2.4,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.staggerFrom(".nav ul li", 1, {
+            delay: 2.4, opacity: 0, y: 20, ease: Expo.easeInOut
+      }, 0.2)
+
+      TweenMax.staggerFrom(".social-media ul li", 1, {
+            delay: 2.4, opacity: 0, y: 20, ease: Expo.easeInOut
+      }, 0.2)
+
+      TweenMax.from(".side-strip", 2, {
+            delay: 2.4,
+            opacity: 0,
+            y: 40,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".row", 2, {
+            delay: 2.4,
+            opacity: 0,
+            x: 40,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".row h6", 2, {
+            delay: 3,
+            opacity: 0,
+            y: 40,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".row p", 2, {
+            delay: 3.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".header h1", 2, {
+            delay: 3.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".header p", 2, {
+            delay: 3.4,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".header button", 2, {
+            delay: 3.6,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".services", 2, {
+            delay: 4,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".social", 2, {
+            delay: 4.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      var t1 = new TimelineMax({paused: true});
+
+      t1.to(".one", 0.8, {
+           y: 6,
+           rotation: 45,
+           ease: Expo.easeInOut
+      });
+      t1.to(".two", 0.8, {
+           y: -6,
+           rotation: -45,
+           ease: Expo.easeInOut,
+           delay: -0.8
+      });
+
+      t1.to(".menu", 2, {
+           top: "0%",
+           ease: Expo.easeInOut,
+           delay: -2
+      });
+
+      t1.staggerFrom(".menu ul li", 2, {x: -200, opacity: 0, ease:Expo.easeOut}, 0.3);
+
+      t1.reverse();
+      $(document).on("click", ".toggle-btn", function() {
+           t1.reversed(!t1.reversed());
+      });
+      $(document).on("click", "a", function() {
+           t1.reversed(!t1.reversed());
+      });
